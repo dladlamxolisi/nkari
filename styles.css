@@ -1,0 +1,403 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White Background Color */
+    color: #000; /* Black Text Color */
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #fff; /* White Header Background Color */
+    color: #1f2b3b; /* Navy Blue Text Color for Header */
+    padding: 5px;
+    display: float;
+    align-items: center; /* Vertically center the content */
+    justify-content: space-between; /* Align logo to the left and menu links to the right */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    max-height: 70px; /* Adjust the height to fit your logo */
+    float: left; /* Float the logo to the left */
+    margin-right: 250px; /* Add more space between logo and menu links */
+  }
+  
+  nav {
+    display: flex; /* Use flexbox to arrange the nav links */
+    align-items: flex-end; /* Vertically center the nav links */
+    gap: 20px;
+  }
+  
+  nav a {
+    font-size: 18px; /* Bigger font size for menu links */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Custom font family */
+    font-weight: bold; /* Bold font weight */
+    color: #0a0aa7; /* Navy Blue Link Color */
+    text-decoration: none;
+    padding: 15px 20px; /* Add padding to the links */
+    border-radius: 5px; /* Add rounded corners */
+    position: relative; /* Position relative to add the underline effect */
+  }
+  
+  nav a::before {
+    content: "";
+    position: absolute;
+    bottom: -3px; /* Position the underline slightly below the text */
+    left: 0; /* Align the underline to the left */
+    width: 100%; /* Width of the underline */
+    height: 2px;
+    background-color: #ffffff; /* Blue color for the underline */
+    transform: scaleX(0); /* Start with no width (hidden) */
+    transform-origin: bottom left; /* Set the transform origin to the bottom left corner */
+    transition: transform 0.3s ease; /* Add a smooth transition to the underline */
+  }
+  
+  nav a:hover::before {
+    transform: scaleX(1); /* Show the underline on hover */
+  }
+  
+  .hero {
+    background-image: url("hero.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 180px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .hero h1 {
+    font-size: 48px; /* Bigger Font Size for Hero Heading */
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px; /* Slightly Bigger Font Size for Hero Subheading */
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+
+  .hero-about {
+    background-image: url("hero\ about.jpg"); /* Replace with the URL or file path of your hero image */
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0; /* Increase the padding to make the hero larger */
+    text-align: center;
+    color: #ffffff;
+}
+
+.hero-services {
+    background-image: url("hero\ services.jpg"); /* Replace with the URL or file path of your hero image */
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0; /* Increase the padding to make the hero larger */
+    text-align: center;
+    color: #ffffff;
+}
+  
+.hero-contact{
+    background-image: url("hero\ contact..jpg"); /* Replace with the URL or file path of your hero image */
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0; /* Increase the padding to make the hero larger */
+    text-align: center;
+    color: #ffffff;
+}
+  button {
+    background-color: #1f2b3b; /* Navy Blue Button Background Color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #34495e; /* Darker Blue Button Hover Color */
+  }
+  
+  section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff; /* White Section Background Color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  #about {
+    background-color: #f7f7f7; /* Light gray background color for the About section */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Styling for the About Us title */
+  #about h2 {
+    font-size: 32px; /* Increase the font size to make it bigger */
+    font-weight: bold;
+    color: #0a0aa7; /* Set the color to the same as the menu links */
+    position: relative; /* Add relative positioning for pseudo-element */
+    display: inline-block; /* Ensure the underline wraps only around the text */
+    margin-bottom: 20px; /* Add some bottom margin for spacing */
+  }
+  
+  #about h2::after {
+    content: ''; /* Add content to create the underline */
+    display: block; /* Make the pseudo-element a block level */
+    position: absolute; /* Position the underline absolutely */
+    width: 100%; /* Set the width to full width */
+    height: 3px; /* Adjust the height of the underline */
+    background-color: #ffffff; /* Set the color of the underline */
+    bottom: -5px; /* Position the underline below the text */
+    left: 0; /* Align the underline to the left */
+    transform: scaleX(0); /* Start with the underline scaled to zero width */
+    transform-origin: left; /* Set the transform origin to the left */
+    transition: transform 0.3s ease; /* Add a transition for the effect */
+  }
+  
+  #about h2:hover::after {
+    transform: scaleX(1); /* On hover, scale the underline to full width */
+  }
+  
+  #about p {
+    font-size: 18px; /* Font size for the About Us text */
+    line-height: 1.6;
+    color: #333; /* Dark gray color for the text */
+    text-align: start;
+  }
+  
+  #services {
+    background-color: #f7f7f7; /* Light gray background color for the Services section */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .service img {
+    max-width: 100%;
+    height: 70px; /* Set a fixed height for the images */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+  }
+  
+  .service h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black; /* Black color for service title */
+    margin-top: 15px;
+  }
+  
+  .service p {
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Styling for the Our Services title */
+  #services h2 {
+    font-size: 32px; /* Bigger font size for the title */
+    font-weight: bold;
+    color: #0a0aa7; /* Blue color for the title */
+    margin-top: 20px; /* Add some top margin to the title */
+    text-align: center; /* Center align the title */
+    position: relative; /* Position relative to add the underline effect */
+    display: inline-block; /* Ensure the underline wraps only around the text */
+  }
+  
+  #services h2::after {
+    content: ''; /* Add content to create the underline */
+    display: block; /* Make the pseudo-element a block level */
+    position: absolute; /* Position the underline absolutely */
+    width: 100%; /* Set the width to full width */
+    height: 3px; /* Adjust the height of the underline */
+    background-color: #0a0aa7; /* Set the color of the underline */
+    bottom: -5px; /* Position the underline below the text */
+    left: 0; /* Align the underline to the left */
+    transform: scaleX(0); /* Start with the underline scaled to zero width */
+    transform-origin: left; /* Set the transform origin to the left */
+    transition: transform 0.3s ease; /* Add a transition for the effect */
+  }
+  
+  /* Remove the default underline on hover */
+  #services h2:hover::after {
+    transform: scaleX(1); /* On hover, scale the underline to full width */
+  }
+  
+  /* Styling for service titles */
+  .service-title {
+    font-size: 24px; /* Bigger font size for service titles */
+    font-weight: bold;
+    color: black; /* Black color for service titles */
+  }
+  
+  #contact {
+    background-color: #f7f7f7; /* Light gray background color for the Contact section */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  /* Styling for the Contact Us title */
+  #contact h2 {
+    font-size: 30px; /* Bigger font size for the title */
+    font-weight: bold;
+    color: #0a0aa7; /* Blue color for the title */
+    margin-top: 30px; /* Add some top margin to the title */
+    text-align: center; /* Center align the title */
+    position: relative; /* Position relative to add the underline effect */
+    display: inline-block; /* Ensure the underline wraps only around the text */
+  }
+  
+  #contact h2::after {
+    content: "";
+    display: block; /* Make the pseudo-element a block level */
+    position: absolute;
+    width: 100%; /* Set the width to full width */
+    height: 3px; /* Adjust the height of the underline */
+    background-color: #0a0aa7; /* Set the color of the underline */
+    bottom: -5px; /* Position the underline below the text */
+    left: 0; /* Align the underline to the left */
+    transform: scaleX(0); /* Start with the underline scaled to zero width */
+    transform-origin: left; /* Set the transform origin to the left */
+    transition: transform 0.3s ease; /* Add a transition for the effect */
+  }
+  
+  #contact h2:hover::after {
+    transform: scaleX(1); /* On hover, scale the underline to full width */
+  }
+  
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 30px;
+  }
+  
+  .contact-info {
+    flex: 1;
+    max-width: 400px;
+    text-align: left; /* Change text alignment to left */
+    padding: 20px; /* Add padding for a card-like effect */
+    background-color: #f7f7f7; /* Light gray background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  .contact-info p {
+    font-size: 16px;
+    color: #333; /* Dark gray color for the text */
+    margin-bottom: 10px;
+  }
+  
+  .contact-info i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #0a0aa7; /* Blue color for the icon */
+  }
+
+  .contact-info .contact-item {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+    margin-left: 50px; /* Add a margin to separate from the contact info */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 8px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin: 10px 0;
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+  }
+  
+  .contact-form button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #031998;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #34495e;
+  }
+  
+  /* Add a unique style to the form */
+  .contact-form::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  h2 {
+    color: #1f2b3b; /* Navy Blue Section Heading Color */
+    margin-top: 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 5px 0;
+  }
+  
+  p {
+    line-height: 1.6;
+  }
+  
